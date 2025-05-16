@@ -1,0 +1,15 @@
+frontend:
+  image: ghcr.io/kennethrioja/clicker-image:latest
+  replicaCount: 1
+  port: 8080
+
+database:
+  image: postgres:15
+  port: 5432
+  secretName: my-db-secret
+
+secrets:
+  dbUser: myuser
+  dbPassword: mypassword
+  dbName: my-db
+  dbTable: my-table
